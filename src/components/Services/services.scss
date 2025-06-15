@@ -1,0 +1,71 @@
+@import '../styles/variables.scss';
+
+.services {
+    padding: 5rem 2rem;
+    background-color: $verde-claro;
+    text-align: center;
+
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        color: $azul-principal;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // 3 colunas iguais
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @media (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr); // 2 colunas em telas menores
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr; // 1 coluna em telas bem pequenas
+        }
+    }
+
+    .service-card {
+        flex: 1 1 300px;
+        max-width: 360px;
+        height: 300px;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        svg {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            max-width: 90%;
+        }
+
+        &:nth-child(odd) {
+            background-color: $verde-principal; // verde
+        }
+
+        &:nth-child(even) {
+            background-color: $azul-hover; // azul
+        }
+    }
+}

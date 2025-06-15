@@ -1,0 +1,123 @@
+@import '../styles/variables.scss';
+
+.hero {
+    background-image: url('../../assets/imagens/bolhas.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem;
+    gap: 3rem; // aumenta ou diminui esse valor para ajustar a distância entre texto e imagem
+    color: $azul-principal;
+
+    &__content {
+        flex: 1;
+        max-width: 550px;
+        
+
+        h1 {
+            font-size: 2.8rem;
+            color: $azul-principal;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            text-align:left;
+        }
+
+        p {
+            font-size: 1.15rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            text-align:left;
+
+            &.hero__subtitle {
+                font-size: 2rem;
+                border-radius: 20px;
+                background-color: $azul-principal;
+                color: #ffffff;
+                border: 2px solid $azul-principal;
+                margin-bottom: 1.5rem;
+                text-align:center;
+                line-height: 1.6;
+            }
+        }
+
+        .hero__btn {
+            display: inline-block;
+            padding: 0.9rem 2.2rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            margin-right: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid $azul-principal;
+
+            &.primary {
+                background-color: $azul-principal;
+                color: white;
+
+                &:hover {
+                    background-color: $azul-hover;
+                    border-color: $azul-hover;
+                }
+            }
+
+            &.secondary {
+                background-color: transparent;
+                color: $azul-principal;
+
+                &:hover {
+                    background-color: rgba(0, 74, 173, 0.1);
+                }
+            }
+        }
+
+        .hero__image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            /* agora a imagem fica mais próxima do texto */
+    
+            &.img {
+                max-height: 70vh;
+                width: auto;
+                border-radius: 15px;
+                object-fit: contain;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            }
+        }
+    }
+
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem;
+        gap: 1.5rem;
+
+        &__content {
+            max-width: 100%;
+            text-align: center;
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        &__image {
+            margin-top: 2rem;
+            justify-content: center;
+
+            img {
+                max-height: 40vh;
+            }
+        }
+    }
+}
