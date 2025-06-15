@@ -15,19 +15,41 @@ export default function Header() {
         <header className="header">
             <div className="header__main">
                 <div className="header__logo">
-                    <img src={logo} alt="Logo da Lavanderia" className="header__logo-image" />
+                    <img
+                        src={logo}
+                        alt="Logo da Lavanderia"
+                        className="header__logo-image"
+                    />
                 </div>
 
-                <nav className={isMenuOpen ? "header__nav active" : "header__nav"}>
-                    <a href="#inicio" className="nav-button" onClick={handleLinkClick}>Início</a>
-                    <a href="#servicos" className="nav-button" onClick={handleLinkClick}>Serviços</a>
-                    <a href="#sobre" className="nav-button" onClick={handleLinkClick}>Sobre</a>
-                    <a href="#faq" className="nav-button" onClick={handleLinkClick}>FAQ</a>
-                    <a href="#contato" className="nav-button contato-btn" onClick={handleLinkClick}>Contato</a>
+                <nav className={isMenuOpen ? 'header__nav active' : 'header__nav'}>
+                    <a href="#inicio" className="nav-button" onClick={handleLinkClick}>
+                        Início
+                    </a>
+                    <a href="#servicos" className="nav-button" onClick={handleLinkClick}>
+                        Serviços
+                    </a>
+                    <a href="#sobre" className="nav-button" onClick={handleLinkClick}>
+                        Sobre
+                    </a>
+                    <a href="#faq" className="nav-button" onClick={handleLinkClick}>
+                        FAQ
+                    </a>
+
+                    {/* Exemplo para contato via WhatsApp */}
+                    <a
+                        href="https://wa.me/5599999999999"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="nav-button contato-btn"
+                        onClick={handleLinkClick}
+                    >
+                        Contato
+                    </a>
                 </nav>
 
                 <button
-                    className={isMenuOpen ? "hamburger open" : "hamburger"}
+                    className={isMenuOpen ? 'hamburger open' : 'hamburger'}
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                     aria-label="Menu"
                     aria-expanded={isMenuOpen}

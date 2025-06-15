@@ -35,6 +35,7 @@
     &__nav {
         display: flex;
         gap: 2rem;
+        box-sizing: border-box;
 
         .nav-button {
             text-decoration: none;
@@ -131,31 +132,67 @@
             display: none;
             position: fixed;
             top: 60px;
-            right: 0;
+            left: 50%;
+            /* posição inicial no meio da tela */
+            transform: translateX(-50%);
+            /* move para o centro real */
             background-color: #ffffff;
             flex-direction: column;
-            width: 100%;
+            width: 90vw;
+            /* ocupa 90% da largura da tela */
+            max-width: 320px;
+            /* largura máxima para não ficar enorme */
+            box-sizing: border-box;
+            /* faz padding contar dentro da largura */
             padding: 1.2rem 1.5rem;
             gap: 1rem;
             border-top: 2px solid $azul-principal;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            z-index: 1500; /* garantir que fique acima */
+            z-index: 1500;
+            /* garantir que fique acima */
+            overflow-x: hidden;
+            /* evita scroll horizontal */
 
             &.active {
                 display: flex;
             }
 
             .nav-button {
-                width: 100%;
-                text-align: left;
-                font-size: 1.1rem;
-                padding: 0.6rem 1rem;
-                border-radius: 12px;
+                width: auto;
+                /* tira o 100% para o botão ser pequeno */
+                text-align: center;
+                /* centraliza o texto do botão */
+                font-size: 1.11rem;
+                /* igual desktop */
+                padding: 0.4rem 1rem;
+                /* igual desktop */
+                border-radius: 20px;
+                /* igual desktop */
+                white-space: nowrap;
+                transition: background-color 0.3s ease, color 0.3s ease;
+
+                &.houver {
+                    background-color: #4785d5fb;
+                    /* mesmo hover do desktop */
+                    color: #ffffff;
+                }
             }
 
             .contato-btn {
-                width: 100%;
+                width: auto;
                 text-align: center;
+                padding: 0.5rem 1.4rem;
+                /* igual desktop */
+                border-radius: 30px;
+
+                &:hover {
+                    background: linear-gradient(145deg, $azul-principal, $azul-hover);
+                    box-shadow:
+                        0 0 0 3px lighten($azul-principal, 30%),
+                        0 0 0 6px $azul-principal;
+                    color: #ffffff;
+                    text-shadow: none;
+                }
             }
         }
 
