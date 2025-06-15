@@ -1,0 +1,91 @@
+@import '../styles/variables.scss';
+
+.conheca {
+    padding: 3rem 1rem;
+    background-color: #f6fbff;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    &__left {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    &__right {
+        flex: 1;
+        max-width: 450px;
+        padding: 1rem;
+
+        h2 {
+            font-size: 2rem;
+            border-radius: 20px;
+            background-color: $verde-principal;
+            color: #ffffff;
+            border: 2px solid $verde-claro;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: $azul-principal;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: rgb(112, 112, 112);
+            line-height: 1.6;
+        }
+    }
+
+    .conheca__icons-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // 2 colunas iguais
+        gap: 1rem 2rem; // espaçamento entre linhas e colunas
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0 0 0;
+
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: $azul-principal;
+
+            .icon {
+                margin: 1px;
+                width: 24px;
+                height: 24px;
+                color: $azul-hover; // cor dos ícones, pode mudar
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__content {
+            flex-direction: column;
+        }
+
+        &__left,
+        &__right {
+            max-width: 100%;
+        }
+
+        &__right h2 {
+            text-align: center;
+        }
+
+        &__right p {
+            text-align: justify;
+        }
+    }
+}
