@@ -26,8 +26,8 @@
         }
 
         p {
-            font-size: 1.15rem;
-            color: #ffffff;
+            font-size: 1.50rem;
+            color: rgb(112, 112, 112);
             margin-bottom: 1.5rem;
             line-height: 1.6;
             text-align:left;
@@ -35,9 +35,9 @@
             &.hero__subtitle {
                 font-size: 2rem;
                 border-radius: 20px;
-                background-color: $azul-principal;
+                background-color: $verde-principal;
                 color: #ffffff;
-                border: 2px solid $azul-principal;
+                border: 2px solid $verde-claro;
                 margin-bottom: 1.5rem;
                 text-align:center;
                 line-height: 1.6;
