@@ -9,7 +9,7 @@
     padding: 0.5rem 1.4rem;
     border-radius: 30px;
     background: linear-gradient(145deg, #57c057, $verde-principal);
-    color: $azul-principal;
+    color: white;
     border: none;
     transition: all 0.3s ease;
     box-shadow:
@@ -19,7 +19,7 @@
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 
     &:hover {
-        background: linear-gradient(145deg, #257c4a, #1e6c3f);
+        background: linear-gradient(145deg, #85c7a2, #1e6c3f);
         box-shadow:
             0 0 0 3px lighten(#257c4a, 20%),
             0 0 0 6px #257c4a;

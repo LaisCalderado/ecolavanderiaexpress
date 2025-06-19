@@ -6,7 +6,7 @@ export default function Services() {
     return (
         <section className="services" id="servicos">
             <h2 className="services__title">Nossos Serviços</h2>
-            <p>Nossos serviços oferecidos a você</p>
+            <p>Venha nos fazer uma visita e descubra por que somos a Melhor Lavanderia - onde a excelência se encontra com a comodidade!</p>
             <div className="services__grid">
                 <div className="service-card">
                     <Shirt size={48} /> {/* verde */}

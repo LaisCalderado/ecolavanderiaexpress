@@ -88,4 +88,38 @@
             text-align: justify;
         }
     }
+
+    // botão dentro da seção conheca
+    .conheca__left .botao-whatsapp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem auto 0 auto; // centraliza horizontalmente
+        padding: 1rem 4rem; // aumenta o tamanho do botão
+        font-size: 1.4rem;
+        max-width: fit-content;
+        border-radius: 30px;
+        background: linear-gradient(145deg, $verde-claro, $verde-principal);
+        color: #fff;
+        text-decoration: none;
+        box-shadow:
+            0 0 0 3px lighten($verde-principal, 20%),
+            0 0 0 6px $verde-principal;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: linear-gradient(145deg, $azul-principal, $azul-hover);
+            box-shadow:
+                0 0 0 3px lighten($azul-principal, 30%),
+                0 0 0 6px $azul-principal;
+            color: #ffffff;
+        }
+
+        .whatsapp-icon {
+            margin-right: 0.5rem;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
 }
