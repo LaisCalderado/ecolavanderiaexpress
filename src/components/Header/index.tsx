@@ -66,7 +66,7 @@ export default function Header() {
                         FAQ
                     </a>
                     <a
-                        href="https://wa.me/5599999999999"
+                        href="https://wa.me/553199901010"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="nav-button contato-btn"

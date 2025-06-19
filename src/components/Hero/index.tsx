@@ -14,7 +14,7 @@ export default function Hero() {
                     pensado para o seu bem-estar. Conte com economia, agilidade e uma localização privilegiada
                     com estacionamento próprio para sua comodidade!
                 </p>
-                <a href="href=https://wa.me/553199901010" className="hero__btn primary">Entrar em contato</a>
+                <a href="https://wa.me/553199901010" className="hero__btn primary">Entrar em contato</a>
                 <a href="#saibamais" className="hero__btn secondary">Saiba mais</a>
             </div>
             <div className="hero__image">
