@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './header.scss';
 import logo from '../../assets/imagens/logo.png';
+import ButtonContacts from '../Contact';
+
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,6 +12,7 @@ export default function Header() {
     // Fecha menu ao clicar num link
     const handleLinkClick = () => {
         setIsMenuOpen(false);
+        console.log('Clicou no link');
     };
 
     // Fecha o menu ao clicar fora ou ao rolar
@@ -65,15 +68,13 @@ export default function Header() {
                     <a href="#faq" className="nav-button" onClick={handleLinkClick}>
                         FAQ
                     </a>
-                    <a
-                        href="https://wa.me/553199901010"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <ButtonContacts
+                        texto="Contato"
                         className="nav-button contato-btn"
+                        telefone="553199901010"
                         onClick={handleLinkClick}
-                    >
-                        Contato
-                    </a>
+                    />
+
                 </nav>
 
                 <button
