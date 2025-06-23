@@ -5,8 +5,8 @@ import { Shirt, Wind, Star, Store, CheckCircle, Droplet  } from 'lucide-react';
 export default function Services() {
     return (
         <section className="services" id="servicos">
-            <h2 className="services__title">Nossos Serviços</h2>
-            <p>Venha nos fazer uma visita e descubra por que somos a Melhor Lavanderia - onde a excelência se encontra com a comodidade!</p>
+            <p className="services__subtitle">Por que escolher a Eco Express Lavanderia </p>
+            <h1 className="services__title">Venha nos fazer uma visita e descubra por que somos a Melhor Lavanderia - onde a excelência se encontra com a comodidade!</h1>
             <div className="services__grid">
                 <div className="service-card">
                     <Shirt size={48} /> {/* verde */}
