@@ -8,6 +8,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 
 import './App.css';
+import Reviews from './components/Reviews';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <Services />
             <Conheca/>
             <Local />
+            <Reviews/>
             <FAQ />
             <Footer />
         </div>
