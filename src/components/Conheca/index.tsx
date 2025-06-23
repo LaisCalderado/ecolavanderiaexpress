@@ -12,7 +12,7 @@ export default function Conheca() {
     }
 
     return (
-        <section className="conheca">
+        <section className="conheca" id="sobre">
             <div className="conheca__content">
                 <div className="conheca__left">
                     <Carrossel />
@@ -54,7 +54,7 @@ export default function Conheca() {
                             Limpeza impecável
                         </li>
                         <li>
-                            <SprayCan className="icon" />
+                            <SprayCan className="icon" size={48}/>
                             Cheirinho reserva para as roupas
                         </li>
                         <li>

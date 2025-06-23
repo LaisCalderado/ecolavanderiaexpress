@@ -19,7 +19,7 @@ export default function Local() {
 
 
     return (
-        <section className="localizacao">
+        <section className="localizacao" id="local">
             <div className="localizacao__content">
                 <h2>Onde nos encontrar</h2>
 
