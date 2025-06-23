@@ -4,84 +4,33 @@
     background-image: url('../../assets/imagens/bolhas.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    padding: 0 3rem;
-    gap: 3rem; // aumenta ou diminui esse valor para ajustar a distância entre texto e imagem
+    justify-content: space-between;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 3rem;
     color: $azul-principal;
 
     &__content {
-        flex: 1;
         max-width: 550px;
-        
+        padding: 1rem;
+        text-align: center;
+    }
 
-        h1 {
-            font-size: 2.8rem;
-            color: $azul-principal;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            text-align:left;
-        }
+    &__image {
+        max-width: 100%;
 
-        p {
-            font-size: 1.50rem;
-            color: rgb(112, 112, 112);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            text-align:left;
+        img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
 
-            &.hero__subtitle {
-                font-size: 2rem;
-                border-radius: 20px;
-                background-color: $verde-principal;
-                color: #ffffff;
-                border: 2px solid $verde-claro;
-                margin-bottom: 1.5rem;
-                text-align:center;
-                line-height: 1.6;
-            }
-        }
-
-        .hero__btn {
-            display: inline-block;
-            padding: 0.9rem 2.2rem;
-            border-radius: 30px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            margin-right: 1rem;
-            transition: all 0.3s ease;
-            border: 2px solid $azul-principal;
-
-            &.primary {
-                background-color: $azul-principal;
-                color: white;
-
-                &:hover {
-                    background-color: $azul-hover;
-                    border-color: $azul-hover;
-                }
-            }
-
-            &.secondary {
-                background-color: transparent;
-                color: $azul-principal;
-
-                &:hover {
-                    background-color: rgba(0, 74, 173, 0.1);
-                }
-            }
-        }
-
-        .hero__image {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            /* agora a imagem fica mais próxima do texto */
-    
-            &.img {
+            img {
                 max-height: 70vh;
                 width: auto;
                 border-radius: 15px;
@@ -92,31 +41,111 @@
     }
 
 
-    @media (max-width: 900px) {
+    h1 {
+        font-size: 2.8rem;
+        color: $azul-principal;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    p {
+        font-size: 1.50rem;
+        color: rgb(112, 112, 112);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+        text-align: left;
+
+        &.hero__subtitle {
+            font-size: 2rem;
+            border-radius: 20px;
+            background-color: $verde-principal;
+            color: #ffffff;
+            border: 2px solid $verde-claro;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+    }
+
+    .hero__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: flex-start;
+
+        @media (max-width: 900px) {
+            justify-content: center;
+        }
+    }
+
+    .hero__btn {
+        display: inline-block;
+        padding: 0.9rem 2.2rem;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-decoration: none;
+        margin-right: 1rem;
+        transition: all 0.3s ease;
+        border: 2px solid $azul-principal;
+        flex-shrink: 0;
+        white-space: nowrap;
+
+        &.primary {
+            background-color: $azul-principal;
+            color: white;
+
+            &:hover {
+                background-color: $azul-hover;
+                border-color: $azul-hover;
+            }
+        }
+
+        &.secondary {
+            background-color: transparent;
+            color: $azul-principal;
+
+            &:hover {
+                background-color: rgba(0, 74, 173, 0.1);
+            }
+        }
+    }
+}
+
+
+@media (max-width: 900px) {
+    .hero {
         flex-direction: column;
-        height: auto;
+        align-items: center;
+        text-align: center;
         padding: 2rem;
-        gap: 1.5rem;
 
         &__content {
             max-width: 100%;
-            text-align: center;
 
             h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             p {
                 font-size: 1rem;
+
+                &.hero__subtitle {
+                    font-size: 1.4rem;
+                }
+            }
+
+            .hero__btn {
+                margin-bottom: 1rem;
             }
         }
 
         &__image {
-            margin-top: 2rem;
-            justify-content: center;
+            margin-top: 1rem;
 
             img {
-                max-height: 40vh;
+                max-height: 250px;
             }
         }
     }

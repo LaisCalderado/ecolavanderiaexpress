@@ -26,7 +26,7 @@ export default function Services() {
                 <div className="service-card">
                     <Star size={48} />
                     <h3>Produtos de primeira linha</h3>
-                    <p>Utilizamos apenas produtos de alta qualidade como Omo e confort concentrado.</p>
+                    <p>Utilizamos apenas produtos de alta qualidade como Omo e Comfort concentrado.</p>
                 </div>
                 <div className="service-card">
                     <Store size={48} />
