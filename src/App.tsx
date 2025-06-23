@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Conheca from './components/Conheca';
 import Services from './components/Services';
-import Contact from './components/Contact';
 import Local from './components/Local';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -19,7 +18,6 @@ function App() {
             <Conheca/>
             <Local />
             <FAQ />
-            <Contact />
             <Footer />
         </div>
     );
