@@ -1,51 +1,68 @@
 import React from 'react';
-import { Instagram, MapPin, Phone, MessageSquare } from 'lucide-react';
+import { Instagram, Phone, MessageSquare } from 'lucide-react';
 import './local.scss';
 
 export default function Local() {
+    
+    // Funções para abrir os links
+    const openPhone = () => window.open('https://wa.me/5531999901010', '_blank');
+    const openWhatsApp = () => window.open('https://wa.me/5531999901010', '_blank');
+    const openInstagram = () => window.open('https://instagram.com/eco.lavanderiaexpress', '_blank');
+
+    // Função para lidar com teclado (Enter e Espaço) para acessibilidade
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>, openFunc: () => void) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openFunc();
+        }
+    };
+
+
     return (
         <section className="localizacao">
             <div className="localizacao__content">
-
                 <h2>Onde nos encontrar</h2>
 
                 <div className="service-cards">
-                    <div className="service-item">
+                    <div
+                        className="service-item clickable"
+                        role="button"
+                        tabIndex={0}
+                        onClick={openPhone}
+                        onKeyDown={(e) => handleKeyDown(e, openPhone)}
+                    >
                         <div className="icon-button">
                             <Phone size={48} className="icon" />
                         </div>
-                        <h3
-                            onClick={() => window.open('https://wa.me/5531999901010', '_blank')}
-                            className="clickable"
-                        >
-                            Telefone
-                        </h3>
+                        <h3>Telefone</h3>
                         <p>(31) 99990-1010</p>
                     </div>
 
-                    <div className="service-item">
+                    <div
+                        className="service-item clickable"
+                        role="button"
+                        tabIndex={0}
+                        onClick={openWhatsApp}
+                        onKeyDown={(e) => handleKeyDown(e, openWhatsApp)}
+                    >
                         <div className="icon-button">
                             <MessageSquare size={48} className="icon" />
                         </div>
-                        <h3
-                            onClick={() => window.open('https://wa.me/5531999901010', '_blank')}
-                            className="clickable"
-                        >
-                            WhatsApp
-                        </h3>
+                        <h3>WhatsApp</h3>
                         <p>(31) 99990-1010</p>
                     </div>
 
-                    <div className="service-item">
+                    <div
+                        className="service-item clickable"
+                        role="button"
+                        tabIndex={0}
+                        onClick={openInstagram}
+                        onKeyDown={(e) => handleKeyDown(e, openInstagram)}
+                    >
                         <div className="icon-button">
                             <Instagram size={48} className="icon" />
                         </div>
-                        <h3
-                            onClick={() => window.open('https://instagram.com/eco.lavanderiaexpress', '_blank')}
-                            className="clickable"
-                        >
-                            Instagram
-                        </h3>
+                        <h3>Instagram</h3>
                         <p>@eco.lavanderiaexpress</p>
                     </div>
                 </div>
@@ -63,7 +80,7 @@ export default function Local() {
                             referrerPolicy="no-referrer-when-downgrade"
                         />
                     </div>
-                    <h1 className='localizacao_map-endereco'>Endereço</h1>
+                    <h1 className="localizacao_map-endereco">Endereço</h1>
                     <p className="localizacao__map-legenda">
                         Av. Álvares Cabral, 1.200 - Belo Horizonte, MG, 30170-004
                     </p>
