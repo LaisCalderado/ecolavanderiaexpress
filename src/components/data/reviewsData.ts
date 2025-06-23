@@ -1,0 +1,80 @@
+export const reviewsData = [
+    {
+        id: 1,
+        name: "Laís Calderado",
+        rating: 5,
+        comment: "Foi uma experiência muito boa, extremamente rápido e fácil de utilizar. Perfeito para quem está viajando, recomendo muito!!!",
+    },
+    {
+        id: 2,
+        name: "Vinicius Silva",
+        rating: 5,
+        comment: "Gostei muito da lavandeia. Tudo muito prático e rápido. Tem uma mesa para facilitar a dobra das roupas. Ótima opção para quem não tem máquina de lavar ou está em viagem.",
+    },
+    {
+        id: 3,
+        name: "Gabriel Costa",
+        rating: 5,
+        comment: "Top. atendimento excelente!",
+    },
+    {
+        id: 4,
+        name: "Anderson Yamada (Yamada Fotografia)",
+        rating: 5,
+        comment: "Ótima lavanderia! Anda salvando minha vida ultimamente.",
+    },
+    {
+        id: 5,
+        name: "Leoeana Honorato",
+        rating: 5,
+        comment: "Excelente qualidade! Super indico... Ótimo atendimento!!!",
+    },
+    {
+        id: 6,
+        name: "Gabriela Wald",
+        rating: 5,
+        comment: "Melhor lavanderia de BH! Atendimento impecável.",
+    },
+    {
+        id: 7,
+        name: "Gabriel Rá Sousa",
+        rating: 5,
+        comment: "Atendente é muito atenciosa.",
+    },
+    {
+        id: 8,
+        name: "altieres Silva",
+        rating: 5,
+        comment: "Ambiente climatizado, já valeu demais. Roupas cheirosas demais.",
+    },
+    {
+        id: 7,
+        name: "Raquel Nascimento",
+        rating: 5,
+        comment: "Amei a experiência. As roupas saem limpinhas e cheirosas. Com certeza melhor lavandaria de BH.",
+    },
+    {
+        id: 9,
+        name: "Hirokazu Shimabukuro",
+        rating: 5,
+        comment: "Existem muitas lavanderias express na cidade, self-services e automáticas, mas a Eco Lavanderia possui diferenciais: você não precisa ficar plantado em frente à máquina esperando o serviço ser executado, eles podem cuidar das suas roupas em todo o processo. Além de tudo, tem o serviço de retirada e entrega, o que é de grande conveniência, além do atendimento rápido via WhatsApp (tá no endereço do site). Recomendo.",
+    },
+    {
+        id: 10,
+        name: "Ana Carolina",
+        rating: 5,
+        comment: "Primeira vez em BH e encontrei essa lavanderia bem em frente ao hotel que fiquei hospedada ❤️ Tinha uma mocinha muito educada que me ensinou como utilizar o serviço da lavanderia. Adorei e recomendo. ⭐",
+    },
+    {
+        id: 11,
+        name: "Menildo Freitas",
+        rating: 5,
+        comment: "Atendimento excelente e ótima qualidade nos serviços. Entrega o que promete 👏👏👏",
+    },
+    {
+        id: 12,
+        name: "Thayna Cardoso",
+        rating: 5,
+        comment: "Ótima experiência! A lavanderia é bem organizada, com máquinas modernas e de fácil uso. O ambiente é limpo, e as instruções são claras, facilitando o processo. Além disso, o tempo de lavagem e secagem é eficiente, o que torna tudo mais prático. Excelente opção para quem precisa lavar roupas de forma rápida e sem complicação. Recomendo!",
+    },
+];

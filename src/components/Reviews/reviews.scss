@@ -1,0 +1,179 @@
+@import '../styles/variables.scss';
+
+.reviews {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    background-color: #ffffff;
+    text-align: center;
+
+    &__title {
+        font-size: 1.8rem;
+        background-color: $verde-principal;
+        color: #ffffff;
+        border: 2px solid $verde-claro;
+        border-radius: 20px;
+        padding: 0.6rem 1.4rem;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: $azul-principal;
+        margin-bottom: 3rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.4;
+    }
+
+    .reviews__list {
+        padding: 0 10px;
+
+        .slick-slide {
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .slick-list {
+            overflow: hidden;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            display: none;
+        }
+    }
+
+    .review-card {
+        background: linear-gradient(145deg, #ffffff, #f0f4f8);
+        border-radius: 18px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        padding: 2rem;
+        min-height: 320px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-6px);
+        }
+
+        .review-quote {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 3rem;
+            color: $azul-principal;
+            opacity: 0.1;
+        }
+
+        .review-avatar {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-header {
+            margin-bottom: 0.8rem;
+            text-align: center;
+
+            strong {
+                display: block;
+                font-size: 1.15rem;
+                color: #222;
+                margin-bottom: 0.4rem;
+            }
+
+            .review-rating {
+                display: flex;
+                justify-content: center;
+                gap: 0.15rem;
+                font-size: 1.2rem;
+
+                .star {
+                    color: #ccc;
+
+                    &.filled {
+                        color: #f5a623;
+                    }
+                }
+            }
+        }
+
+        .review-comment {
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.6;
+            max-width: 90%;
+            text-align: center;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .review-cta {
+        margin-top: 5rem;
+        padding: 3rem 2rem;
+        background-color: #ffffff;
+        border-radius: 24px;
+        color: $azul-principal;
+        text-align: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &__title {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        &__text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1.4rem;
+            border-radius: 30px;
+            background: linear-gradient(145deg, #57c057, $verde-principal);
+            color: white;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow:
+                0 0 0 3px lighten($verde-principal, 20%),
+                0 0 0 6px $verde-principal;
+
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+            &:hover {
+                background: linear-gradient(145deg, #85c7a2, #1e6c3f);
+                box-shadow:
+                    0 0 0 3px lighten(#257c4a, 20%),
+                    0 0 0 6px #257c4a;
+                text-shadow: none;
+            }
+
+            .whatsapp-icon {
+                width: 1.2rem;
+                height: 1.2rem;
+            }
+        }
+    }
+}
