@@ -8,5 +8,6 @@ html,
 body {
   width: 100%;
   overflow-x: hidden; 
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif,'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
 }
