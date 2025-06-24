@@ -135,4 +135,11 @@
         margin-top: 4rem;
         padding: 1rem 2rem;
     }
+
+    // Responsividade para os cards ficarem um abaixo do outro no mobile
+    @media (max-width: 768px) {
+        .promocao__cards {
+            grid-template-columns: 1fr !important;
+        }
+    }
 }
