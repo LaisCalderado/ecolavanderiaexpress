@@ -65,6 +65,9 @@ export default function Header() {
                     <a href="#sobre" className="nav-button" onClick={handleLinkClick}>
                         Sobre
                     </a>
+                    <a href="#reviews" className="nav-button" onClick={handleLinkClick}>
+                        Avaliações
+                    </a>
                     <a href="#faq" className="nav-button" onClick={handleLinkClick}>
                         FAQ
                     </a>
