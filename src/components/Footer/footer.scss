@@ -1,8 +1,162 @@
-// footer.scss
+@import '../styles/variables.scss';
+
 .footer {
-    background-color: #1e3a8a;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.875rem;
+    background-color: white;
+    color: rgb(58, 58, 58);
+    font-family: 'Inter', sans-serif, system-ui, Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 1.5rem;
+    border-top: 1px solid #82A364;
+
+    .footer__logo {
+        width: 120px;
+    }
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__columns {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 2rem;
+        text-align: left;
+    }
+
+    &__column {
+        h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: $azul-principal;
+            font-weight: 600;
+        }
+
+        a,
+        span,
+        p {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: rgb(58, 58, 58);
+            text-decoration: none;
+            font-size: 1rem;
+
+            &:hover {
+                color: $verde-principal;
+                font-weight: bold;
+            }
+
+            &:before {
+                content: "•"; // Usando um ponto sólido maior e mais bonito
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: $verde-principal;
+                display: inline-block;
+                width: 1rem;
+            }
+        }
+
+        .footer__address {
+            &:before {
+                content: none;
+            }
+        }
+
+        .footer__address {
+            &:before {
+                content: '';
+                display: inline-block;
+                background-size: contain;
+                width: 16px;
+                height: 16px;
+                margin-right: 0.4rem;
+            }
+        }
+    }
+
+    .footer__branding {
+        display: flex;
+        flex-direction: column; // muda de linha
+        align-items: center; // centraliza horizontalmente
+        margin-top: 2rem;
+        margin-left: auto;
+
+        .footer__logo {
+            width: 120px;
+            margin-bottom: 1rem;
+        }
+
+        .footer__contacts {
+            display: flex;
+            gap: 1rem;
+
+            a {
+                color: white;
+                background-color: $verde-principal;
+                padding: 0.5rem;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background 0.3s;
+
+                &:hover {
+                    background-color: $verde-claro;
+                }
+            }
+        }
+    }
+
+    &__bottom {
+        background-color: white;
+        text-align: center;
+        padding: 1rem;
+        font-size: 1rem;
+        border-top: 1px solid #82A364;
+    }
+
+    @media (max-width: 768px) {
+        &__branding {
+            .footer__contacts {
+                margin-top: 1rem;
+                margin-left: auto;
+            }
+        }
+
+        &__top {
+            align-items: center;
+        }
+
+        &__columns {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__column {
+            align-items: center;
+            text-align: center;
+            margin-left: auto;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__columns {
+            grid-template-columns: 0.5fr;
+            text-align: center;
+        }
+
+        &__column {
+            align-items: center;
+            text-align: center;
+            margin-left: auto;
+        }
+
+        .footer__column:last-child {
+            order: 1;
+        }
+    }
 }
