@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import Arrow from "../ArrowPastNext";
 import { reviewsData } from "../data/reviewsData";
+import { MapIcon } from "lucide-react";
 import "./reviews.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -59,18 +60,22 @@ export default function Reviews() {
             </Slider>
 
             <div className="review-cta">
-                <h2 className="review-cta__title">Nos avalie também!</h2>
-                <p className="review-cta__text">
-                    Deixe sua avaliação em nosso perfil do Google Meu Negócio
-                </p>
-                <a
-                    href="https://www.google.com/maps/place/Eco+Lavanderia+Express/@-19.9299202,-43.9484361,17z/data=!4m8!3m7!1s0xa6997c5493de75:0x92ff63572a8348a0!8m2!3d-19.9299325!4d-43.9454122!9m1!1b1!16s%2Fg%2F11x7n6tvg5?hl=pt-BR&entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="review-cta__button"
-                >
-                    Avaliar agora
-                </a>
+                <div className="review-cta">
+                    <h2 className="review-cta__title">Nos avalie também!</h2>
+                    <p className="review-cta__text">
+                        Deixe sua avaliação em nosso perfil do Google Meu Negócio
+                    </p>
+                    <a
+                        href="https://www.google.com/maps/place/Eco+Lavanderia+Express/@-19.9299202,-43.9484361,17z/data=!4m8!3m7!1s0xa6997c5493de75:0x92ff63572a8348a0!8m2!3d-19.9299325!4d-43.9454122!9m1!1b1!16s%2Fg%2F11x7n6tvg5?hl=pt-BR"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="review-cta__button"
+                    >
+                        <MapIcon size={24} style={{ marginRight: '0.75rem' }} />
+                        Enviar avaliação agora
+                    </a>
+                </div>
+
             </div>
 
         </section>
