@@ -26,7 +26,7 @@ export default function Footer() {
                         <h4>Nosso site</h4>
                         <a href="#inicio">Início</a>
                         <a href="#reviews">Depoimentos</a>
-                        <a href="#beneficios">Benefícios</a>
+                        <a href="#promocoes">Benefícios</a>
                     </div>
 
                     <div className="footer__column">

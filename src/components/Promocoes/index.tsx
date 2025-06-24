@@ -19,7 +19,7 @@ export default function Promocao() {
     ];
 
     return (
-        <section className="promocao">
+        <section className="promocao" id="promocoes">
             <div className="promocao__container">
                 <div className="promocao__icon">
                     <Tag size={40} />
